@@ -1,0 +1,16 @@
+[{
+  "name": "Software Update",
+  "percentage": 65
+}, {
+  "name": "Hardware Upgrade",
+  "percentage": 35,
+  "class": "progress-bar-danger"
+}, {
+  "name": "Unit Testing",
+  "percentage": 15,
+  "class": "progress-bar-warning"
+}, {
+  "name": "Bug Fixes",
+  "percentage": 90,
+  "class": "progress-bar-success"
+}]

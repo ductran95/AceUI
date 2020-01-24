@@ -1,0 +1,29 @@
+<div aceLayoutHeader class="navbar navbar-default" [ngClass]="{'navbar-fixed-top': ace.setting.navbar}"></div>
+<div class="main-container" [ngClass]="{'container': ace.setting.container}">
+    <div aceLayoutSidebar class="sidebar responsive ace-save-state"
+        [ngClass]="{'menu-min': ace.sidebar.minimized, 'sidebar-fixed': ace.setting.sidebar, 'compact': ace.setting.compact}">
+    </div>
+    <div class="main-content">
+        <div class="main-content-inner">
+
+            <div aceLayoutPageHeader class="breadcrumbs" [ngClass]="{'breadcrumbs-fixed': ace.setting.breadcrumbs}">
+            </div>
+
+            <div class="page-content">
+                <div aceLayoutSetting class="ace-settings-container"></div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <router-outlet></router-outlet>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aceLayoutFooter class="footer"></div>
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div>

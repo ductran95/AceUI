@@ -1,0 +1,38 @@
+<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+    <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+    <span class="badge badge-important">{{notificationList.length}}</span>
+</a>
+
+<ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+    <li class="dropdown-header">
+        <i class="ace-icon fa fa-exclamation-triangle"></i>
+        {{notificationList.length}} Notifications
+    </li>
+
+    <li class="dropdown-content" aceScroll [scrollOptions]="scrollOptions">
+        <ul class="dropdown-menu dropdown-navbar navbar-pink">
+            <li *ngFor="let noti of notificationList">
+                <a href="#">
+                    <div *ngIf="!noti.badge">
+                        <i class="btn btn-xs {{noti.icon}} {{noti.iconClass}}"></i>
+                        {{noti.title}}
+                    </div>
+                    <div class="clearfix" *ngIf="noti.badge">
+                        <span class="pull-left">
+                            <i class="btn btn-xs no-hover {{noti.icon}} {{noti.iconClass}}"></i>
+                            {{noti.title}}
+                        </span>
+                        <span class="pull-right badge {{noti.badgeClass}}">{{noti.badge}}</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="dropdown-footer">
+        <a href="#">
+            See all notifications
+            <i class="ace-icon fa fa-arrow-right"></i>
+        </a>
+    </li>
+</ul>

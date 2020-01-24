@@ -1,0 +1,23 @@
+[{
+  "title": "New Comments",
+  "icon": "fa fa-comment",
+  "iconClass": "btn-pink",
+  "badge": "+12",
+  "badgeClass": "badge-info"
+}, {
+  "title": "Bob just signed up as an editor ...",
+  "icon": "fa fa-user",
+  "iconClass": "btn-primary"
+}, {
+  "title": "New Orders",
+  "icon": "fa fa-shopping-cart",
+  "iconClass": "btn-success",
+  "badge": "+8",
+  "badgeClass": "badge-success"
+}, {
+  "title": "Followers",
+  "icon": "fa fa-twitter",
+  "iconClass": "btn-info",
+  "badge": "+11",
+  "badgeClass": "badge-info"
+}]

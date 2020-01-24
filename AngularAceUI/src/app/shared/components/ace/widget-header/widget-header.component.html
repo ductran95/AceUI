@@ -1,0 +1,12 @@
+<div class="widget-header">
+    <h5 class="widget-title"></h5>
+    <div class="widget-toolbar" [ngIf]="!!whOptions">
+        <a [ngIf]="whOptions.fullscreen" data-action="fullscreen" class="orange2"><i
+                class="ace-icon fa fa-expand"></i></a>
+        <a [ngIf]="whOptions.reload" data-action="reload"><i class="ace-icon fa fa-refresh"></i></a>
+        <a [ngIf]="whOptions.toggle" data-action="collapse"><i class="ace-icon fa"
+                [ngClass]="{toggleIconUp: !wbHidden, toggleIconDown: whHidden}" [attr.data-icon-hide]="whToggleIconUp"
+                [attr.data-icon-show]="whToggleIconDown"></i></a>
+        <a [ngIf]="whOptions.close" data-action="close"><i class="ace-icon fa fa-times"></i></a>
+    </div>
+</div>

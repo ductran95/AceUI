@@ -1,0 +1,12 @@
+<div class="dropdown-colorpicker">
+    <a class="dropdown-toggle" type="button" data-toggle="dropdown">
+        <span class="btn-colorpicker" [ngStyle]="{'background-color': selectedColor.color}"></span>
+    </a>
+    <ul class="dropdown-menu"
+        [ngClass]="{'dropdown-menu-right': cpOptions.pull_right, 'dropdown-caret': cpOptions.caret}">
+        <li *ngFor="let colorItem of cpColorList">
+            <a (click)="chooseColor(colorItem)" [ngClass]="{'colorpick-btn': true , 'selected': colorItem.selected}"
+                [ngStyle]="{'background-color': colorItem.color}"></a>
+        </li>
+    </ul>
+</div>

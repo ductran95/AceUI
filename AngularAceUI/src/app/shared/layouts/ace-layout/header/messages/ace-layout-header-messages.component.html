@@ -1,0 +1,40 @@
+<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+    <i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+    <span class="badge badge-success">{{messageList.length}}</span>
+</a>
+
+<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+    <li class="dropdown-header">
+        <i class="ace-icon fa fa-envelope-o"></i>
+        {{messageList.length}} Messages
+    </li>
+
+    <li class="dropdown-content" aceScroll [scrollOptions]="scrollOptions">
+        <ul class="dropdown-menu dropdown-navbar">
+            <li *ngFor="let message of messageList">
+                <a href="#" class="clearfix">
+                    <img [src]="'assets/avatars/' + message.image" class="msg-photo"
+                        alt="{{message.sender}}'s Avatar" />
+                    <span class="msg-body">
+                        <span class="msg-title">
+                            <span class="blue">{{message.sender}}:</span>
+                            {{message.summary}}
+                        </span>
+
+                        <span class="msg-time">
+                            <i class="ace-icon fa fa-clock-o"></i>
+                            <span>{{' ' + message.time}}</span>
+                        </span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="dropdown-footer">
+        <a href="inbox.html">
+            See all messages
+            <i class="ace-icon fa fa-arrow-right"></i>
+        </a>
+    </li>
+</ul>

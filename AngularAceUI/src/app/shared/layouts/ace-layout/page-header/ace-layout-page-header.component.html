@@ -1,0 +1,23 @@
+<!-- #section:basics/content.breadcrumbs -->
+<ul class="breadcrumb">
+    <li *ngFor="let item of routerTree" [ngClass]="{'active': item.isActive}">
+        <i class="ace-icon fa fa-home home-icon" *ngIf="!item.url"></i>
+        <a [routerLink]="item.url" *ngIf="!item.isActive">{{item.name}}</a>
+        {{item.isActive ? item.name : ''}}
+    </li>
+</ul><!-- /.breadcrumb -->
+
+<!-- #section:basics/content.searchbox -->
+<div class="nav-search" id="nav-search">
+    <form class="form-search">
+        <span class="input-icon">
+            <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input"
+                autocomplete="off" />
+            <i class="ace-icon fa fa-search nav-search-icon"></i>
+        </span>
+    </form>
+</div><!-- /.nav-search -->
+
+<!-- /section:basics/content.searchbox -->
+
+<!-- /section:basics/content.breadcrumbs -->

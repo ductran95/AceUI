@@ -1,0 +1,30 @@
+[{
+  "name": "Dashboard",
+  "path": "",
+  "icon": "fa-tachometer"
+}, {
+  "name": "Fund",
+  "path": "/master-data/fund",
+  "icon": "fa-desktop"
+}, {
+  "name": "Phone",
+  "path": "/master-data/phone",
+  "icon": "fa-pencil-square-o"
+}, {
+  "name": "Master Data",
+  "path": "",
+  "icon": "fa-list",
+  "childrens": [{
+    "name": "City",
+    "path": "/master-data/city",
+    "icon": "fa-caret-right"
+  }, {
+    "name": "County",
+    "path": "/master-data/county",
+    "icon": "fa-caret-right"
+  }, {
+    "name": "User",
+    "path": "/master-data/user",
+    "icon": "fa-caret-right"
+  }]
+}]
